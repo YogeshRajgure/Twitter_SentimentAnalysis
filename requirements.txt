@@ -1,0 +1,10 @@
+re2
+tweepy
+textblob
+matplotlib
+seaborn
+pandas
+numpy
+matplotlib
+flask
+flask-cors

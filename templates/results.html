@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis Page for {{tweet_string}}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="table-users" >
+   <div class="header">
+       Analysis For {{tweet_string}}
+   </div>
+<canvas id="doughnut-chart" width="600" height="600" style="align:center" ></canvas>
+       <div class="visuals">
+           <script>
+new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Negative", "Neutral", "Positive"],
+      datasets: [
+        {
+          label: "sentiments in %",
+          backgroundColor: ['rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(255, 205, 86)'],
+          data: [{{p_n}}, {{p_neu}}, {{p_p}}]
+        }
+      ],
+      hoverOffset: 4
+    },
+
+    options: {
+                responsive: false,
+                }
+});
+</script>
+       </div>
+   </div>
+
+
+
+
+  <div id="wrapper">
+
+      <table>
+    <tr>
+        <td>
+
+  <div class="table-users" id="t1">
+  <table cellspacing="0">
+      <tr><th>Negative Tweets  {{p_n}}%</th></tr>
+          {% for neg in n_tweets %}
+          <tr>
+            <td class="td_1">{{ neg }}</td>
+          </tr>
+          {% endfor %}
+  </table>
+  </div>
+        </td>
+
+        <td>
+
+    <div class="table-users" id="t2">
+  <table cellspacing="0">
+            <tr><th>Neutral Tweets {{p_neu}}%</th></tr>
+
+          {% for neu in n_tweets %}
+          <tr>
+              <td class="td_1">{{ neu }}</td>
+          </tr>
+          {% endfor %}
+  </table>
+    </div>
+        </td>
+
+        <td>
+
+  <div class="table-users" id="t3">
+  <table cellspacing="0">
+            <tr><th>Positive Tweets {{p_p}}%</th></tr>
+
+          {% for pos in p_tweets %}
+          <tr>
+              <td class="td_1">{{ pos }}</td>
+          </tr>
+          {% endfor %}
+  </table>
+  </div>
+        </td>
+    </tr>
+      </table>
+  </div>
+</body>
+
+</html>
