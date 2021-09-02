@@ -1,4 +1,3 @@
-re2
 tweepy
 textblob
 matplotlib
