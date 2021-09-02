@@ -12,11 +12,11 @@ app = Flask(__name__)
 
 
 # twitter authentication
-consumer_key = "BznbNay8GVIoRHMJWjkEv2Lm6"
-consumer_secret = "OUe5wVHxtzmikWUHTKyBJlY7ANbPvWWSkULMh99AieZxhgICGv"
+consumer_key = "aaaaaaaaaaaaaaaaaaaaaaaaa"
+consumer_secret = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
-access_token = "1096098583214993408-pxsMeJecccMPSSKEzBLvdzjI04wep2"
-access_token_secret = "GjLRVa5KX48hGxZsshnTCaqqEaqkckk0XyWolNXCiQVRF"
+access_token = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+access_token_secret = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
 try:
     auth = OAuthHandler(consumer_key, consumer_secret)
