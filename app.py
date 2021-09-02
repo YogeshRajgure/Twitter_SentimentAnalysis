@@ -3,7 +3,6 @@ import re
 import tweepy
 from tweepy import OAuthHandler
 from textblob import TextBlob
-from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request, jsonify
@@ -12,12 +11,12 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 
 
-
 # twitter authentication
-consumer_key = 'wPB1Rsclt7YtKcPKFjWdbyeRN'
-consumer_secret = 'tsm67CihfQ65FMNqGNVkYmODLf4JlKW0LptnnzsRKtYmqZzoAd'
-access_token = '1096098583214993408-s3Mz8xPp8FMKDS3LVGrjTPYusx996V'
-access_token_secret = '8goJjN6EbMDr2kagUcq4cv0f6gBd2fF1hSjtynyXqDhJJ'
+consumer_key = "xxxxxxxxxxxxxxxxxx"
+consumer_secret = "####################"
+
+access_token = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+access_token_secret = "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 
 try:
     auth = OAuthHandler(consumer_key, consumer_secret)
@@ -98,14 +97,15 @@ def index():
             percent_n_t = 100 * len(n_tweets) / len(tweets)
             percent_neutral_t = 100 * len(neutral_tweets) / len(tweets)
 
-            print(percent_n_t)
-            print(percent_p_t)
-            print(percent_neutral_t)
-            print(p_tweets)
-            print('-'*30)
-            print(n_tweets)
-            print('-'*30)
-            print(neutral_tweets)
+            #print(percent_n_t)
+            #print(percent_p_t)
+            #print(percent_neutral_t)
+            #print(p_tweets[0])
+            #print('-'*30)
+            #print(n_tweets[0])
+            #print('-'*30)
+            #print(neutral_tweets[0])
+
             #print("Positive tweets percentage: {} %".format(100 * len(p_tweets) / len(tweets)))
             #all_tweet_data = api.search(q=tweet_string, count=tweet_count)
 
@@ -126,7 +126,7 @@ def index():
             if len(neutral_tweets) < 5:
                 pass
             else:
-                neutral_tweets = neutral_tweets[:5]
+                neutral_tweets = neutral_tweets[6:11]
 
 
             return render_template('results.html', tweet_string=tweet_string,
