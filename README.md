@@ -1,10 +1,10 @@
 # Twitter Sentiment Analysis and Prediction
 
 
-[![Web App GIF](static/media/senti.gif)](https://twitter-analysis-web-app.herokuapp.com)
+[![Web App GIF](static/media/demo.gif)](https://twitter-analysis-web-app.herokuapp.com)
 <br/>
 
-__Dive into the industry and get my hands dirty. That's why I start this self-motivated independent project.__
+__I started this self motivated project to explore and implement tweepy, textblob, Flask, chart.js with Python.__
 
 Try this awesome __[Real-Time Twitter Monitoring System here](https://twitter-analysis-web-app.herokuapp.com)__ on Heroku server. Read a series of related articles below:
 
